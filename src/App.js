@@ -15,12 +15,17 @@ function App() {
 
   const [userData, setUserData] = useState(INITIAL_DATA);
 
-
+  const addUserData = (enteredName, enteredAge) => {
+    const newData = {name: enteredName, age: enteredAge, id: Math.random()}
+    setUserData((prevData) => {
+      return [...prevData, newData];
+    });
+  }
 
   return (
     <>
       <Container>
-        <UserForm />
+        <UserForm onAddData={addUserData}/>
       </Container>
       <Container>
         <UserData data={userData}/>

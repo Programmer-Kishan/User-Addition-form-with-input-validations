@@ -3,7 +3,7 @@ import { useState } from 'react';
 import LabelInput from './LabelInput';
 import Button from '../UI/Button/Button';
 
-const UserForm = () => {
+const UserForm = (props) => {
 
     const [name, setName] = useState('');
     const [age, setAge] = useState(0);
@@ -18,7 +18,7 @@ const UserForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(name, age);
+        props.onAddData(name, age);
         setName('')
         setAge(0)
     }
