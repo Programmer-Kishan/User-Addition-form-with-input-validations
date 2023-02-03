@@ -4,5 +4,7 @@
     color: #fff;
     background-color: #645CBB;
     font-size: 1.1rem;
+    width: 25%;
     padding: 12px;
+    cursor: pointer;
 }
